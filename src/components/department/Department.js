@@ -14,7 +14,7 @@ export default class Exams extends Component {
 
     return (
       <section className="department">
-        <p>útfæra</p>
+        <p>Dep</p>
       </section>
     );
   }
