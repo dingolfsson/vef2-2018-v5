@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { Fetch } from './../school/School';
-
 import './Department.css';
 
 /**
@@ -13,32 +11,37 @@ import './Department.css';
 export default class Exams extends Component {
 
   render() {
-
+    const { onHeaderClick, title, visible, data, test } = this.props;
+    const plus = visible ? '- ' : '+ ';
     return (
       <section className="department">
-        <div>
-        <Fetch
-          url="https://vefforritun2-2018-v4-synilausn.herokuapp.com/felagsvisindasvid"
-          render={({ loading, error, data}) => {
-            if (loading) {
-              return (<div>Sæki gengi...</div>);
-            }
+        <li onClick={onHeaderClick} >{plus}{data.heading}</li>
+        {visible && (
+          <div>
 
-            if (error) {
-              return (<div>Villa við að sækja gengi</div>);
-            }
-
-            return (
-              <section>
-                <h2>Felagsvisinda - Slodir</h2>
-                {data.school.departments.map((item, i) => (
-                  <li key={i}>{item.heading}</li>
+            <table>
+              <thead>
+                <tr>
+                  <th>Auðkenni</th>
+                  <th>Námskeið</th>
+                  <th>Fjöldi</th>
+                  <th>Dagsetning</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.keys(data.tests).map((ele, i) => (
+                  <tr key={i}>
+                    <td>{data.tests[i].course} </td>
+                    <td>{data.tests[i].name} </td>
+                    <td>{data.tests[i].students} </td>
+                    <td>{data.tests[i].date} </td>
+                  </tr>
                 ))}
-              </section>
-            );
-          }}
-        />
-      </div>
+              </tbody>
+            </table>
+
+          </div>
+        )}
       </section>
     );
   }

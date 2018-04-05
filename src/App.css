@@ -5,4 +5,23 @@
   padding: 10px;
 }
 
-/* útfæra */
+@import url('https://fonts.google.com/specimen/Noto+Sans');
+@import url('https://fonts.google.com/specimen/Noto+Serif');
+
+* {
+  font-family: "Noto Sans";
+}
+
+h1 {
+  font-family: "Noto Serif";
+  text-align: center;
+}
+
+ul {
+  align-self: center;
+}
+
+.app .test {
+  background-color: salmon;
+  margin: 0% 0% 10% 0%;
+}
