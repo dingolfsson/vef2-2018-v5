@@ -15,7 +15,7 @@ class App extends Component {
 
     return (
       <main className="app">
-        <Helmet defaultTitle="AWESOME">
+        <Helmet defaultTitle="Forsíða">
           Próftöflur
         </Helmet>
         <h1>Próftöflur</h1>
