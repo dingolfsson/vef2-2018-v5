@@ -41,11 +41,8 @@ export default class Navigation extends Component {
     return (
       <nav className="navigation">
         <nav>
-
           <ul>
-
             {Object.keys(data.schools).map((i) => (
-
               <li key={i}>
                 <NavLink to={`/${data.schools[i].slug}`}>{data.schools[i].name}</NavLink>
               </li>
@@ -61,7 +58,6 @@ export default class Navigation extends Component {
           </Switch>
         </section>
       </nav>
-
     );
   }
 }

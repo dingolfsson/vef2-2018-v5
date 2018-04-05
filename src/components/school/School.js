@@ -5,12 +5,6 @@ import './School.css';
 import Department from '../department';
 import NotFound from '../not-found/NotFound';
 
-/**
- * Í þessum component ætti að vera mest um að vera og séð um að:
- * - Sækja gögn fyrir svið og birta
- * - Opna/loka deildum
- */
-
 export default class School extends Component {
   state = { data: null, loading: true, error: false }
 
@@ -42,7 +36,6 @@ export default class School extends Component {
     return data;
   }
 
-  // TODO: breyta heiti
   onHeaderClick = (noteId) => {
     return (e) => {
       const visibleNote = this.state.visibleNote === noteId ? null : noteId;

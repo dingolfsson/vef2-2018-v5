@@ -43,10 +43,10 @@ export default class Home extends Component {
         <h2>Tölfræði</h2>
         <table>
         <tbody>
-        {Object.keys(result).map((item, i) => (
+        {Object.keys(result).map((val, i) => (
           <tr key={i}>
-          <td>{item}</td>
-          <td>{result[item]} </td>
+          <td>{val}</td>
+          <td>{result[val]} </td>
         </tr>
         ))}
         </tbody>
