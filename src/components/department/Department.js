@@ -7,7 +7,6 @@ import './Department.css';
  * Þessi component ætti að vera einfaldur í birtingu en taka fall frá foreldri
  * sem keyrir þegar smellt er á fyrirsögn.
  */
-
 export default class Exams extends Component {
 
   render() {
@@ -18,7 +17,6 @@ export default class Exams extends Component {
         <li onClick={onHeaderClick} >{plus}{data.heading}</li>
         {visible && (
           <div>
-
             <table>
               <thead>
                 <tr>
@@ -29,7 +27,7 @@ export default class Exams extends Component {
                 </tr>
               </thead>
               <tbody>
-                {Object.keys(data.tests).map((ele, i) => (
+                {Object.keys(data.tests).map((__, i) => (
                   <tr key={i}>
                     <td>{data.tests[i].course} </td>
                     <td>{data.tests[i].name} </td>
@@ -39,9 +37,12 @@ export default class Exams extends Component {
                 ))}
               </tbody>
             </table>
-
           </div>
         )}
+        <div>
+          <hr>
+          </hr>
+        </div>
       </section>
     );
   }

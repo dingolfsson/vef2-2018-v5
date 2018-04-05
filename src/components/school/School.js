@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import './School.css';
 import Department from '../department';
+import NotFound from '../not-found/NotFound';
 
 /**
  * Í þessum component ætti að vera mest um að vera og séð um að:
@@ -51,7 +52,6 @@ export default class School extends Component {
 
   render() {
     const { data, loading, error } = this.state;
-
     if (loading) {
       return (<div>Sæki gögn...</div>);
     }
@@ -59,10 +59,7 @@ export default class School extends Component {
     if (error) {
       return (<div>Villa við að sækja gögn</div>);
     }
-    console.log(data);
     return (
-
-
       data.school.departments.map((e, i) => {
         return (
           <Department
