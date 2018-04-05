@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import './School.css';
+import Departments from '../department/Department';
 
 /**
  * Í þessum component ætti að vera mest um að vera og séð um að:
@@ -43,7 +44,7 @@ export default class School extends Component {
 
     return (
       <section className="school">
-        <p>School</p>
+        <Departments />
       </section>
     );
   }

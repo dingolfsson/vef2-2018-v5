@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import { Route, Link, Switch } from 'react-router-dom'
+import { Route, Link, NavLink, Switch } from 'react-router-dom'
 
 import './App.css';
 
@@ -14,9 +14,16 @@ class App extends Component {
 
     return (
       <main className="app">
-        <Navigation />
-        <Home />
-        <School />
+      <p><NavLink to="/">Heim</NavLink></p>
+        <section>
+          <Navigation />
+        </section>
+        <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/School" component={School} />
+            <Route path="/:slug" component={Navigation} />
+            <Route component={NotFound} />
+          </Switch>
       </main>
     );
   }
