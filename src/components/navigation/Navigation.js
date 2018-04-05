@@ -27,7 +27,6 @@ export default class Navigation extends Component {
   async fetchData() {
     const response = await fetch(process.env.REACT_APP_SERVICE_URL);
     const data = await response.json();
-    console.log(data)
     return data;
   }
   render() {

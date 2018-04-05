@@ -15,7 +15,7 @@ export default class School extends Component {
 
   async componentDidMount() {
     try {
-      const data = await this.fetchData();
+      const data = await this.fetchData(this.props.match);
       this.setState({ data, loading: false });
     } catch (e) {
       console.error('Error fetching data', e);
@@ -23,9 +23,9 @@ export default class School extends Component {
     }
   }
 
-  async componentWillReceiveProps() {
+  async componentWillReceiveProps(newProps) {
     try {
-      const data = await this.fetchData();
+      const data = await this.fetchData(newProps.match);
       this.setState({ data, loading: false });
     } catch (e) {
       console.error('Error fetching data', e);
@@ -33,11 +33,8 @@ export default class School extends Component {
     }
   }
 
-  async fetchData() {
-    const { match } = this.props;
-    console.log(match);
+  async fetchData(match) {
     const url = match.params.svid;
-    console.log('URL', url)
     const response = await fetch(process.env.REACT_APP_SERVICE_URL + url);
     const data = await response.json();
     console.log(data)
