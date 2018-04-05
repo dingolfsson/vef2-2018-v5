@@ -4,8 +4,6 @@ import { Route, Link, NavLink, Switch } from 'react-router-dom'
 
 import './App.css';
 
-import Home from './components/home';
-import School from './components/school';
 import Navigation from './components/navigation';
 import NotFound from './components/not-found';
 

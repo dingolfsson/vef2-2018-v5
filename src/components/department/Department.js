@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import './Department.css';
 
@@ -10,7 +9,7 @@ import './Department.css';
 export default class Exams extends Component {
 
   render() {
-    const { onHeaderClick, title, visible, data, test } = this.props;
+    const { onHeaderClick, visible, data } = this.props;
     const plus = visible ? '- ' : '+ ';
     return (
       <section className="department">

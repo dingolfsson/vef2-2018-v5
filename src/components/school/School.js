@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import './School.css';
 import Department from '../department';
-import NotFound from '../not-found/NotFound';
 
 export default class School extends Component {
   state = { data: null, loading: true, error: false }
