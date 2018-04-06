@@ -9,7 +9,7 @@ import './Department.css';
 export default class Exams extends Component {
 
   render() {
-    const { onHeaderClick, visible, data } = this.props;
+    const { onHeaderClick, heading, visible, title, data } = this.props;
     const plus = visible ? '- ' : '+ ';
     return (
       <section className="department">

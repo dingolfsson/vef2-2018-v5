@@ -30,7 +30,6 @@ export default class School extends Component {
     const url = match.params.svid;
     const response = await fetch(process.env.REACT_APP_SERVICE_URL + url);
     const data = await response.json();
-    console.log(data)
     return data;
   }
 
