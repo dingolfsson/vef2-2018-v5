@@ -8,9 +8,7 @@ import Navigation from './components/navigation';
 import NotFound from './components/not-found';
 
 class App extends Component {
-
   render() {
-
     return (
       <main className="app">
         <Helmet defaultTitle="Forsíða">
@@ -20,13 +18,10 @@ class App extends Component {
         <div className="test">
           <Navigation />
         </div>
-
         <p><NavLink to="/">Heim</NavLink></p>
-
       </main>
     );
   }
-
 }
 
 export default App;

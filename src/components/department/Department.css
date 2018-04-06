@@ -1,1 +1,6 @@
 /* útfæra */
+.department table tr:nth-child(even){background-color: #eee;}
+
+th {
+  text-align: left;
+}

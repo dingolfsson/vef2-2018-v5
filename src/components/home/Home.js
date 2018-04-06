@@ -42,12 +42,32 @@ export default class Home extends Component {
         <h2>Tölfræði</h2>
         <table>
         <tbody>
-        {Object.keys(result).map((val, i) => (
+          <tr>
+          <td className="name">Fjöldi prófa</td>
+          <td>{result.numTests}</td>
+          </tr>
+          <tr>
+          <td className="name">Fjöldi nemenda í öllum prófum</td>
+          <td>{result.numStudents}</td>
+          </tr>
+          <tr>
+          <td className="name">Meðalfjöldi nemenda í prófi</td>
+          <td>{result.averageStudents}</td>
+          </tr>
+          <tr>
+          <td className="name">Minnsti fjöldi nemenda í prófi</td>
+          <td>{result.min}</td>
+          </tr>
+          <tr>
+          <td className="name">Mesti fjöldi nemenda í prófi</td>
+          <td>{result.max}</td>
+          </tr>
+        {/* {Object.keys(result).map((val, i) => (
           <tr key={i}>
           <td>{val}</td>
           <td>{result[val]} </td>
-        </tr>
-        ))}
+        </tr> 
+        ))}*/}
         </tbody>
         </table>
       </section>

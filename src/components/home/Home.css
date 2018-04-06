@@ -4,3 +4,7 @@ ul {
   display: inline-block;
   vertical-align: middle;
 }
+
+.name {
+  font-weight: bold
+}
